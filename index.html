@@ -5,39 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReyLayouts - QuickShop</title>
     <style>
-        * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f9fbfe; color: #333; }
-        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f9fbfe; color: #333; line-height: 1.6; }
+
         /* Navbar */
-        nav { display: flex; justify-content: space-between; padding: 20px 50px; align-items: center; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .logo { font-weight: bold; font-size: 24px; color: #00C3FF; }
+        nav { display: flex; justify-content: space-between; padding: 20px 80px; align-items: center; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo { font-weight: bold; font-size: 24px; color: #333; }
         .menu { display: flex; align-items: center; gap: 20px; }
-        .btn-primary { background-color: #00C3FF; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        .btn-cta { background: #00C3FF; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; }
 
-        /* Hero Section */
-        .hero { padding: 60px 20px; text-align: center; max-width: 800px; margin: auto; }
-        .hero h1 { font-size: 48px; margin-bottom: 15px; }
-        .btn-demo { background-color: #00C3FF; color: white; border: none; padding: 15px 40px; border-radius: 8px; font-size: 16px; cursor: pointer; }
-        .placeholder-img { width: 100%; max-width: 500px; height: 250px; background-color: #eee; border-radius: 10px; margin: 30px auto; }
+        /* Hero */
+        .hero { display: flex; align-items: center; padding: 80px 80px; gap: 50px; background: white; }
+        .hero-content { flex: 1; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero-img { flex: 1; height: 300px; background: url('https://images.unsplash.com/photo-1556742049-0cf84f6ecd50?w=800') center/cover; border-radius: 12px; }
 
-        /* Features Section */
-        .features { padding: 40px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: auto; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+        /* Features */
+        .features { padding: 60px 80px; text-align: center; }
+        .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 40px; }
 
-        /* Featured Templates Grid */
-        .featured-templates { padding: 40px 20px; max-width: 1000px; margin: auto; }
-        .template-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
-        .template-card { background: white; border: 1px solid #eee; border-radius: 15px; padding: 20px; }
-        .img-placeholder { width: 100%; height: 180px; background: #f0f0f0; border-radius: 10px; margin-bottom: 15px; }
-        .card-buttons { display: flex; gap: 10px; margin-top: 15px; }
-        .card-buttons button { padding: 8px 15px; border-radius: 5px; border: 1px solid #00C3FF; background: white; color: #00C3FF; cursor: pointer; }
-
-        /* Pricing Section */
-        .pricing { padding: 40px 20px; background: #fff; text-align: center; }
-        .price-card { border: 2px solid #00C3FF; border-radius: 12px; padding: 30px; max-width: 350px; margin: 0 auto; }
-        .price { font-size: 32px; font-weight: bold; color: #00C3FF; margin: 10px 0; }
-
-        footer { padding: 20px; text-align: center; color: #888; font-size: 12px; }
+        /* Templates */
+        .templates { padding: 60px 80px; background: #fff; }
+        .temp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 30px; }
+        .temp-card { background: white; border: 1px solid #eee; padding: 20px; border-radius: 12px; }
+        .temp-img { width: 100%; height: 160px; background: #ddd; margin-bottom: 15px; border-radius: 8px; }
+        .btns { display: flex; gap: 10px; margin-top: 15px; }
+        .btns button { flex: 1; padding: 10px; border: 1px solid #00C3FF; background: white; color: #00C3FF; cursor: pointer; border-radius: 6px; }
+        
+        @media (max-width: 768px) {
+            .hero, .feat-grid, .temp-grid { grid-template-columns: 1fr; padding: 30px; text-align: center; }
+        }
     </style>
 </head>
 <body>
@@ -45,58 +42,37 @@
     <nav>
         <div class="logo">ReyLayouts</div>
         <div class="menu">
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <button class="btn-primary" onclick="window.open('https://wa.me/628XXXXXXXXXX')">Order</button>
+            <a href="#">Fitur</a><a href="#">Harga</a><a href="#">Demo</a>
+            <a href="#" class="btn-cta">Dapatkan QuickShop</a>
         </div>
     </nav>
 
     <header class="hero">
-        <h1>Build Your Online Store in Minutes</h1>
-        <p>Ultra-fast template by ReyLayouts. Focus on selling, not coding.</p>
-        <button class="btn-demo">Try Live Demo</button>
-        <div class="placeholder-img"></div>
+        <div class="hero-content">
+            <h1>Bangun Toko Online Impian Anda dalam Hitungan Menit</h1>
+            <p>Template toko-mikro ReyLayouts yang cepat & responsif. Fokus pada penjualan.</p>
+            <br><button class="btn-cta" style="border:none;">Coba Demo Langsung</button>
+        </div>
+        <div class="hero-img"></div>
     </header>
 
-    <section id="features" class="features">
-        <div class="card"><h3>⚡ Lightning Fast</h3><p>Optimized code means happy customers.</p></div>
-        <div class="card"><h3>📱 Mobile Ready</h3><p>Perfect on every screen, guaranteed.</p></div>
-        <div class="card"><h3>🎨 Easy Custom</h3><p>Simple code to change colors instantly.</p></div>
-    </section>
-
-    <section class="featured-templates">
-        <h2 style="text-align:center;">Featured Templates</h2>
-        <div class="template-grid">
-            <div class="template-card">
-                <div class="img-placeholder"></div>
-                <h3>Gadget Store</h3>
-                <div class="card-buttons">
-                    <button>Demo</button> <button>View Details</button>
-                </div>
-            </div>
-            <div class="template-card">
-                <div class="img-placeholder"></div>
-                <h3>Apparel Boutique</h3>
-                <div class="card-buttons">
-                    <button>Demo</button> <button>View Details</button>
-                </div>
-            </div>
+    <section class="features">
+        <h2>Mengapa QuickShop?</h2>
+        <div class="feat-grid">
+            <div><h3>🚀 Cepat</h3><p>Optimasi kode maksimal.</p></div>
+            <div><h3>📱 Mobile</h3><p>Responsif di semua layar.</p></div>
+            <div><h3>⚙️ Mudah</h3><p>Tinggal edit sesuai keinginan.</p></div>
         </div>
     </section>
 
-    <section id="pricing" class="pricing">
-        <h2>Simple Pricing</h2>
-        <div class="price-card">
-            <h3>Standard License</h3>
-            <div class="price">Rp 50.000</div>
-            <p>Full source code & free updates.</p>
-            <button class="btn-primary" onclick="window.open('https://wa.me/628XXXXXXXXXX')">Buy Now</button>
+    <section class="templates">
+        <h2 style="text-align:center;">Template Unggulan</h2>
+        <div class="temp-grid">
+            <div class="temp-card"><div class="temp-img" style="background: url('https://images.unsplash.com/photo-1591337676887-a210a696a985?w=500') center/cover;"></div><h3>Toko Gadget</h3><div class="btns"><button>Demo</button><button>Lihat Detail</button></div></div>
+            <div class="temp-card"><div class="temp-img" style="background: url('https://images.unsplash.com/photo-1445205170433-06bfe739985c?w=500') center/cover;"></div><h3>Butik Pakaian</h3><div class="btns"><button>Demo</button><button>Lihat Detail</button></div></div>
+            <div class="temp-card"><div class="temp-img" style="background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500') center/cover;"></div><h3>Landing Page</h3><div class="btns"><button>Demo</button><button>Lihat Detail</button></div></div>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2026 ReyLayouts. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
