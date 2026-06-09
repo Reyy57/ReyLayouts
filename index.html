@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReyLayouts - QuickShop</title>
     <style>
+        * { box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f9fbfe; color: #333; }
         
         /* Navbar */
         nav { display: flex; justify-content: space-between; padding: 20px 50px; align-items: center; background: white; }
         .logo { font-weight: bold; font-size: 24px; color: #00C3FF; }
+        .menu { display: flex; align-items: center; }
         .menu a { margin-right: 20px; text-decoration: none; color: #333; font-size: 14px; }
         .btn-primary { background-color: #00C3FF; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; }
 
         /* Hero */
-        .hero { display: flex; align-items: center; padding: 80px 50px; gap: 40px; }
+        .hero { display: flex; align-items: center; padding: 60px 50px; gap: 40px; }
         .hero-text { flex: 1; }
         .hero-text h1 { font-size: 48px; margin-bottom: 20px; line-height: 1.2; }
         .btn-demo { background-color: #00C3FF; color: white; border: none; padding: 15px 30px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 20px; }
-        .placeholder-img { width: 300px; height: 200px; background-color: #ddd; border-radius: 10px; }
+        .placeholder-img { width: 100%; max-width: 300px; height: 200px; background-color: #ddd; border-radius: 10px; margin: 20px auto; }
 
         /* Features */
         .features { padding: 60px 50px; text-align: center; }
@@ -33,7 +35,7 @@
         /* Footer */
         footer { text-align: center; padding: 20px; font-size: 14px; color: #777; }
 
-        /* Responsif */
+        /* Mobile Responsif */
         @media (max-width: 768px) {
             .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
             .hero-text h1 { font-size: 32px; }
@@ -47,10 +49,9 @@
     <nav>
         <div class="logo">ReyLayouts</div>
         <div class="menu">
-            <a href="#">Features</a>
-            <a href="#">Pricing</a>
-            <a href="#">Demo</a>
-            <button class="btn-primary">Get QuickShop</button>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <button class="btn-primary" onclick="window.open('https://wa.me/628XXXXXXXXXX')">Get QuickShop</button>
         </div>
     </nav>
 
@@ -58,14 +59,14 @@
         <div class="hero-text">
             <h1>Build Your Dream Online Store in Minutes</h1>
             <p>The ultra-fast, user-friendly micro-store template by ReyLayouts. Focus on selling, not coding.</p>
-            <button class="btn-demo">Try Live Demo</button>
+            <button class="btn-demo" onclick="alert('Demo akan segera tersedia!')">Try Live Demo</button>
         </div>
         <div class="hero-image">
             <div class="placeholder-img"></div>
         </div>
     </header>
 
-    <section class="features">
+    <section id="features" class="features">
         <h2>Why ReyLayouts?</h2>
         <div class="features-grid">
             <div class="card">
@@ -83,13 +84,13 @@
         </div>
     </section>
 
-    <section class="pricing">
+    <section id="pricing" class="pricing">
         <h2>Simple Pricing</h2>
         <div class="price-card">
             <h3>Standard License</h3>
             <p class="price">Rp 50.000</p>
             <p>Perfect for personal use & small shops.</p>
-            <button class="btn-primary" onclick="window.location.href='https://wa.me/628XXXXXXXXXX'">Buy Now</button>
+            <button class="btn-primary" onclick="window.open('https://wa.me/628XXXXXXXXXX')">Buy Now</button>
         </div>
     </section>
 
