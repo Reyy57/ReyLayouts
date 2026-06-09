@@ -11,27 +11,32 @@
         /* Navbar */
         nav { display: flex; justify-content: space-between; padding: 20px 50px; align-items: center; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .logo { font-weight: bold; font-size: 24px; color: #00C3FF; }
-        .menu { display: flex; align-items: center; }
-        .menu a { margin-right: 20px; text-decoration: none; color: #333; font-size: 14px; }
+        .menu { display: flex; align-items: center; gap: 20px; }
         .btn-primary { background-color: #00C3FF; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; }
 
         /* Hero Section */
-        .hero { padding: 60px 20px; text-align: center; }
-        .hero h1 { font-size: 36px; margin-bottom: 15px; }
-        .hero p { color: #666; margin-bottom: 30px; }
+        .hero { padding: 60px 20px; text-align: center; max-width: 800px; margin: auto; }
+        .hero h1 { font-size: 48px; margin-bottom: 15px; }
         .btn-demo { background-color: #00C3FF; color: white; border: none; padding: 15px 40px; border-radius: 8px; font-size: 16px; cursor: pointer; }
-        .placeholder-img { width: 90%; max-width: 400px; height: 200px; background-color: #eee; border-radius: 10px; margin: 30px auto; }
+        .placeholder-img { width: 100%; max-width: 500px; height: 250px; background-color: #eee; border-radius: 10px; margin: 30px auto; }
 
         /* Features Section */
-        .features { padding: 40px 20px; }
-        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; text-align: center; }
+        .features { padding: 40px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: auto; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+
+        /* Featured Templates Grid */
+        .featured-templates { padding: 40px 20px; max-width: 1000px; margin: auto; }
+        .template-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+        .template-card { background: white; border: 1px solid #eee; border-radius: 15px; padding: 20px; }
+        .img-placeholder { width: 100%; height: 180px; background: #f0f0f0; border-radius: 10px; margin-bottom: 15px; }
+        .card-buttons { display: flex; gap: 10px; margin-top: 15px; }
+        .card-buttons button { padding: 8px 15px; border-radius: 5px; border: 1px solid #00C3FF; background: white; color: #00C3FF; cursor: pointer; }
 
         /* Pricing Section */
         .pricing { padding: 40px 20px; background: #fff; text-align: center; }
         .price-card { border: 2px solid #00C3FF; border-radius: 12px; padding: 30px; max-width: 350px; margin: 0 auto; }
         .price { font-size: 32px; font-weight: bold; color: #00C3FF; margin: 10px 0; }
 
-        /* Footer */
         footer { padding: 20px; text-align: center; color: #888; font-size: 12px; }
     </style>
 </head>
@@ -41,6 +46,7 @@
         <div class="logo">ReyLayouts</div>
         <div class="menu">
             <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
             <button class="btn-primary" onclick="window.open('https://wa.me/628XXXXXXXXXX')">Order</button>
         </div>
     </nav>
@@ -53,13 +59,32 @@
     </header>
 
     <section id="features" class="features">
-        <h2 style="text-align:center;">Why ReyLayouts?</h2>
-        <div class="card"><h3>⚡ Lightning Fast</h3><p>Optimized for speed.</p></div>
-        <div class="card"><h3>📱 Mobile Ready</h3><p>Perfect on every screen.</p></div>
-        <div class="card"><h3>🎨 Easy Custom</h3><p>Change colors in seconds.</p></div>
+        <div class="card"><h3>⚡ Lightning Fast</h3><p>Optimized code means happy customers.</p></div>
+        <div class="card"><h3>📱 Mobile Ready</h3><p>Perfect on every screen, guaranteed.</p></div>
+        <div class="card"><h3>🎨 Easy Custom</h3><p>Simple code to change colors instantly.</p></div>
     </section>
 
-    <section class="pricing">
+    <section class="featured-templates">
+        <h2 style="text-align:center;">Featured Templates</h2>
+        <div class="template-grid">
+            <div class="template-card">
+                <div class="img-placeholder"></div>
+                <h3>Gadget Store</h3>
+                <div class="card-buttons">
+                    <button>Demo</button> <button>View Details</button>
+                </div>
+            </div>
+            <div class="template-card">
+                <div class="img-placeholder"></div>
+                <h3>Apparel Boutique</h3>
+                <div class="card-buttons">
+                    <button>Demo</button> <button>View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
         <h2>Simple Pricing</h2>
         <div class="price-card">
             <h3>Standard License</h3>
