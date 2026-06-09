@@ -10,37 +10,35 @@
         /* Navbar */
         nav { display: flex; justify-content: space-between; padding: 20px 50px; align-items: center; background: white; }
         .logo { font-weight: bold; font-size: 24px; color: #00C3FF; }
-        .menu a { margin-right: 20px; text-decoration: none; color: #333; }
+        .menu a { margin-right: 20px; text-decoration: none; color: #333; font-size: 14px; }
         .btn-primary { background-color: #00C3FF; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; }
 
         /* Hero */
         .hero { display: flex; align-items: center; padding: 80px 50px; gap: 40px; }
         .hero-text { flex: 1; }
-        .hero-text h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero-text h1 { font-size: 48px; margin-bottom: 20px; line-height: 1.2; }
         .btn-demo { background-color: #00C3FF; color: white; border: none; padding: 15px 30px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 20px; }
         .placeholder-img { width: 300px; height: 200px; background-color: #ddd; border-radius: 10px; }
 
-        /* Features Section */
+        /* Features */
         .features { padding: 60px 50px; text-align: center; }
-        .features-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 20px; 
-            margin-top: 30px; 
-        }
-        .card { 
-            background: white; 
-            padding: 30px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-        }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+        /* Pricing */
+        .pricing { padding: 60px 50px; text-align: center; background: #fff; }
+        .price-card { max-width: 300px; margin: 30px auto; padding: 30px; border: 2px solid #00C3FF; border-radius: 12px; }
+        .price { font-size: 24px; font-weight: bold; color: #00C3FF; margin: 15px 0; }
+
+        /* Footer */
+        footer { text-align: center; padding: 20px; font-size: 14px; color: #777; }
 
         /* Responsif */
         @media (max-width: 768px) {
             .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
             .hero-text h1 { font-size: 32px; }
             nav { padding: 20px; flex-direction: column; gap: 15px; }
-            .menu { display: flex; gap: 10px; }
+            .features, .pricing { padding: 40px 20px; }
         }
     </style>
 </head>
@@ -84,6 +82,20 @@
             </div>
         </div>
     </section>
+
+    <section class="pricing">
+        <h2>Simple Pricing</h2>
+        <div class="price-card">
+            <h3>Standard License</h3>
+            <p class="price">Rp 50.000</p>
+            <p>Perfect for personal use & small shops.</p>
+            <button class="btn-primary">Buy Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ReyLayouts. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
