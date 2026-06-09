@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReyLayouts - Build Your Online Store</title>
+    <title>ReyLayouts - QuickShop</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', sans-serif; background-color: #f9fbfe; color: #333; line-height: 1.6; }
-        nav { display: flex; justify-content: space-between; padding: 20px 5%; align-items: center; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo { font-weight: bold; font-size: 24px; color: #00C3FF; }
-        .menu { display: flex; align-items: center; gap: 20px; }
-        .btn-cta { background: #00C3FF; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; }
         
-        .hero { padding: 60px 5%; text-align: center; background: white; }
-        .section { padding: 60px 5%; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
-        .card { background: white; padding: 30px; border-radius: 12px; border: 1px solid #eee; }
+        /* Navbar */
+        nav { display: flex; justify-content: space-between; padding: 20px 5%; align-items: center; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo { font-weight: bold; font-size: 20px; color: #00C3FF; }
+        .menu { display: flex; align-items: center; gap: 15px; }
+        .btn-cta { background: #00C3FF; color: white; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 13px; }
+
+        /* Section */
+        .section { padding: 40px 5%; }
+        h2 { margin-bottom: 25px; text-align: center; }
+        p { margin-bottom: 15px; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        .card { background: white; padding: 25px; border-radius: 12px; border: 1px solid #eee; text-align: center; }
         
-        .pricing { background: #f0faff; padding: 60px 5%; text-align: center; }
-        .price-box { background: white; padding: 40px; border-radius: 15px; display: inline-block; width: 100%; max-width: 300px; }
-        
-        .faq { padding: 60px 5%; background: white; text-align: left; }
-        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        
-        /* Floating WA Button */
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1000; }
-        
-        footer { padding: 40px; text-align: center; color: #888; font-size: 13px; }
+        /* Testimonial */
+        .testi { background: #f0faff; padding: 40px 5%; text-align: center; }
+        .testi-card { font-style: italic; color: #555; margin-bottom: 10px; }
+
+        /* Footer */
+        footer { padding: 30px; text-align: center; font-size: 12px; color: #888; border-top: 1px solid #eee; }
+        .footer-links { margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -34,46 +35,34 @@
     <nav>
         <div class="logo">ReyLayouts</div>
         <div class="menu">
-            <a href="#features">Fitur</a><a href="#pricing">Harga</a>
-            <a href="#" class="btn-cta">Order</a>
+            <a href="#features">Fitur</a><a href="#pricing">Harga</a><a href="#" class="btn-cta">Order</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>Build Your Dream Online Store in Minutes</h1>
-        <p>Template toko-mikro ReyLayouts yang sangat cepat. Fokus pada penjualan.</p>
-        <br><button class="btn-cta" style="border:none;">Try Live Demo</button>
+    <header class="section" style="text-align:center;">
+        <h1>Bangun Toko Online Impian Anda dalam Hitungan Menit</h1>
+        <p>Template toko-mikro ReyLayouts yang cepat & responsif. Fokus pada penjualan.</p>
+        <button style="background:#00C3FF; color:white; border:none; padding:12px 30px; border-radius:8px; cursor:pointer;">Coba Demo Langsung</button>
     </header>
 
     <section id="features" class="section">
-        <h2>Mengapa ReyLayouts?</h2>
+        <h2>Why ReyLayouts?</h2>
         <div class="grid">
-            <div class="card"><h3>⚡ Lightning Fast</h3><p>Optimasi kode maksimal.</p></div>
-            <div class="card"><h3>📱 Mobile Ready</h3><p>Responsif di semua layar.</p></div>
-            <div class="card"><h3>⭐ Trusted</h3><p>Dukungan penuh dari kami.</p></div>
+            <div class="card"><h3>⚡ Lightning Fast</h3><p>Optimasi kode maksimal buat pembeli.</p></div>
+            <div class="card"><h3>📱 Mobile Ready</h3><p>Responsif di semua ukuran layar.</p></div>
         </div>
     </section>
 
-    <section id="pricing" class="pricing">
-        <h2>Pilihan Paket</h2>
-        <br><br>
-        <div class="price-box">
-            <h3>Standard License</h3>
-            <h1>Rp 50.000</h1>
-            <p>Full source code & updates.</p>
-            <br><button class="btn-cta" style="width:100%; border:none;">Beli Sekarang</button>
-        </div>
+    <section class="testi">
+        <h2>Apa Kata Mereka?</h2>
+        <div class="testi-card">"Template-nya gampang banget dipake, penjualan langsung naik!"</div>
+        <p>— User Puas ReyLayouts</p>
     </section>
-
-    <section class="faq">
-        <h2>Pertanyaan Umum (FAQ)</h2>
-        <div class="faq-item"><strong>Q: Dapat update gratis?</strong><p>A: Ya, update selamanya!</p></div>
-        <div class="faq-item"><strong>Q: Bisa dibantu install?</strong><p>A: Tenang, ada panduannya.</p></div>
-    </section>
-
-    <a href="https://wa.me/628XXXXXXXXXX" class="wa-float">Chat via WhatsApp</a>
 
     <footer>
+        <div class="footer-links">
+            <a href="#">Instagram</a> | <a href="#">WhatsApp</a>
+        </div>
         <p>&copy; 2026 ReyLayouts. All rights reserved.</p>
     </footer>
 
