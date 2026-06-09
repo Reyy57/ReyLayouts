@@ -6,42 +6,33 @@
     <title>ReyLayouts - QuickShop</title>
     <style>
         * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f9fbfe; color: #333; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f9fbfe; color: #333; }
         
         /* Navbar */
-        nav { display: flex; justify-content: space-between; padding: 20px 50px; align-items: center; background: white; }
+        nav { display: flex; justify-content: space-between; padding: 20px 50px; align-items: center; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .logo { font-weight: bold; font-size: 24px; color: #00C3FF; }
         .menu { display: flex; align-items: center; }
         .menu a { margin-right: 20px; text-decoration: none; color: #333; font-size: 14px; }
         .btn-primary { background-color: #00C3FF; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; }
 
         /* Hero */
-        .hero { display: flex; align-items: center; padding: 60px 50px; gap: 40px; }
-        .hero-text { flex: 1; }
-        .hero-text h1 { font-size: 48px; margin-bottom: 20px; line-height: 1.2; }
-        .btn-demo { background-color: #00C3FF; color: white; border: none; padding: 15px 30px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 20px; }
-        .placeholder-img { width: 100%; max-width: 300px; height: 200px; background-color: #ddd; border-radius: 10px; margin: 20px auto; }
+        .hero { padding: 60px 20px; text-align: center; }
+        .hero h1 { font-size: 36px; margin-bottom: 15px; }
+        .hero p { color: #666; margin-bottom: 30px; }
+        .btn-demo { background-color: #00C3FF; color: white; border: none; padding: 15px 40px; border-radius: 8px; font-size: 16px; cursor: pointer; }
+        .placeholder-img { width: 90%; max-width: 400px; height: 200px; background-color: #eee; border-radius: 10px; margin: 30px auto; }
 
         /* Features */
-        .features { padding: 60px 50px; text-align: center; }
-        .features-grid { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; max-width: 500px; margin-left: auto; margin-right: auto; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .features { padding: 40px 20px; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 15px; text-align: center; }
 
         /* Pricing */
-        .pricing { padding: 60px 50px; text-align: center; background: #fff; }
-        .price-card { max-width: 300px; margin: 30px auto; padding: 30px; border: 2px solid #00C3FF; border-radius: 12px; }
-        .price { font-size: 24px; font-weight: bold; color: #00C3FF; margin: 15px 0; }
+        .pricing { padding: 40px 20px; background: #fff; text-align: center; }
+        .price-card { border: 2px solid #00C3FF; border-radius: 12px; padding: 30px; max-width: 350px; margin: 0 auto; }
+        .price { font-size: 32px; font-weight: bold; color: #00C3FF; margin: 10px 0; }
 
         /* Footer */
-        footer { text-align: center; padding: 20px; font-size: 14px; color: #777; }
-
-        /* Mobile Responsif */
-        @media (max-width: 768px) {
-            .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
-            .hero-text h1 { font-size: 32px; }
-            nav { padding: 20px; flex-direction: column; gap: 15px; }
-            .features, .pricing { padding: 40px 20px; }
-        }
+        footer { padding: 20px; text-align: center; color: #888; font-size: 12px; }
     </style>
 </head>
 <body>
@@ -50,46 +41,30 @@
         <div class="logo">ReyLayouts</div>
         <div class="menu">
             <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <button class="btn-primary" onclick="window.open('https://wa.me/628XXXXXXXXXX')">Get QuickShop</button>
+            <button class="btn-primary" onclick="window.open('https://wa.me/628XXXXXXXXXX')">Order</button>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-text">
-            <h1>Build Your Dream Online Store in Minutes</h1>
-            <p>The ultra-fast, user-friendly micro-store template by ReyLayouts. Focus on selling, not coding.</p>
-            <button class="btn-demo" onclick="alert('Demo akan segera tersedia!')">Try Live Demo</button>
-        </div>
-        <div class="hero-image">
-            <div class="placeholder-img"></div>
-        </div>
+        <h1>Build Your Online Store in Minutes</h1>
+        <p>Ultra-fast template by ReyLayouts. Focus on selling, not coding.</p>
+        <button class="btn-demo">Try Live Demo</button>
+        <div class="placeholder-img"></div>
     </header>
 
     <section id="features" class="features">
-        <h2>Why ReyLayouts?</h2>
-        <div class="features-grid">
-            <div class="card">
-                <h3>⚡ Lightning Fast</h3>
-                <p>Optimized for speed so your customers don't wait.</p>
-            </div>
-            <div class="card">
-                <h3>📱 Mobile Ready</h3>
-                <p>Looks perfect on every device, guaranteed.</p>
-            </div>
-            <div class="card">
-                <h3>🎨 Easy Custom</h3>
-                <p>Clean code structure to change colors in seconds.</p>
-            </div>
-        </div>
+        <h2 style="text-align:center;">Why ReyLayouts?</h2>
+        <div class="card"><h3>⚡ Lightning Fast</h3><p>Optimized for speed.</p></div>
+        <div class="card"><h3>📱 Mobile Ready</h3><p>Perfect on every screen.</p></div>
+        <div class="card"><h3>🎨 Easy Custom</h3><p>Change colors in seconds.</p></div>
     </section>
 
-    <section id="pricing" class="pricing">
+    <section class="pricing">
         <h2>Simple Pricing</h2>
         <div class="price-card">
             <h3>Standard License</h3>
-            <p class="price">Rp 50.000</p>
-            <p>Perfect for personal use & small shops.</p>
+            <div class="price">Rp 50.000</div>
+            <p>Full source code & free updates.</p>
             <button class="btn-primary" onclick="window.open('https://wa.me/628XXXXXXXXXX')">Buy Now</button>
         </div>
     </section>
